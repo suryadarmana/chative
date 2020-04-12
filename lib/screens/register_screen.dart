@@ -1,6 +1,8 @@
 import 'package:chative/components/form_button.dart';
 import 'package:chative/components/form_input.dart';
+import 'package:chative/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RegisterScreen extends StatefulWidget {
   static final String id = 'register_screen';
@@ -10,6 +12,11 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final _auth = FirebaseAuth.instance;
+
+  String email;
+  String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +38,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 48.0,
               ),
               FormInput(
-                onChanged: (item) {},
+                onChanged: (value) {
+                  email = value;
+                },
                 hintText: 'Enter your e-mail',
                 focusedBorderColor: Colors.amber.shade900,
                 isPassword: false,
+                keyboardType: TextInputType.emailAddress,
               ),
               FormInput(
-                onChanged: (item) {},
+                onChanged: (value) {
+                  password = value;
+                },
                 hintText: 'Enter your password',
                 focusedBorderColor: Colors.amber.shade900,
                 isPassword: true,
@@ -46,8 +58,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 48.0,
               ),
               FormButton(
-                onClick: () {
-                  //Navigator.pushNamed(context, LoginScreen.id);
+                onClick: () async {
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                      email: email,
+                      password: password,
+                    );
+                    if (newUser != null) {
+                      Navigator.pushNamed(context, ChatScreen.id);
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
                 },
                 label: 'Register',
                 buttonColor: Colors.amber.shade900,
