@@ -11,8 +11,12 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Hellow World'),
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          child: Text('Hellow World'),
+        ),
+      ),
     );
   }
 }
