@@ -1,4 +1,5 @@
 import 'package:chative/screens/welcome_screen.dart';
+import 'package:chative/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class Chative extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Theme Definition
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(textTheme: kDefaultTextTheme),
 
       // Routes Configuration
       initialRoute: WelcomeScreen.id,
