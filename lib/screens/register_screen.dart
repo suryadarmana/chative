@@ -33,13 +33,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
               FormInput(
                 onChanged: (item) {},
                 hintText: 'Enter your e-mail',
-                focusedBorderColor: Colors.amber.shade600,
+                focusedBorderColor: Colors.amber.shade900,
                 isPassword: false,
               ),
               FormInput(
                 onChanged: (item) {},
                 hintText: 'Enter your password',
-                focusedBorderColor: Colors.amber.shade600,
+                focusedBorderColor: Colors.amber.shade900,
                 isPassword: true,
               ),
               SizedBox(
@@ -50,7 +50,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   //Navigator.pushNamed(context, LoginScreen.id);
                 },
                 label: 'Register',
-                buttonColor: Colors.amber.shade600,
+                buttonColor: Colors.amber.shade900,
               ),
             ],
           ),
