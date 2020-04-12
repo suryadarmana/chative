@@ -1,6 +1,7 @@
 # Chative
 
-![Logo of Chative](https://github.com/suryadarmana/chative/blob/master/images/logo.png)
+![Logo of Chative](https://github.com/suryadarmana/chative/blob/master/images/logo.png)<!-- .element height="50%" width="50%" -->
+
 A simple chat app that I've made using flutter and firebase.
 
 ## How To Clone in Android studio
