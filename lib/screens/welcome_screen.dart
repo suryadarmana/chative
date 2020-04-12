@@ -1,7 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:chative/components/form_button.dart';
+import 'package:chative/screens/register_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   // Screen ID For Routes
@@ -52,14 +55,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               // Login & Register Button
               FormButton(
                 onClick: () {
-                  //Navigator.pushNamed(context, LoginScreen.id);
+                  Navigator.pushNamed(context, LoginScreen.id);
                 },
                 label: 'Login',
                 buttonColor: Colors.amber.shade600,
               ),
               FormButton(
                 onClick: () {
-                  //Navigator.pushNamed(context, RegistrationScreen.id);
+                  Navigator.pushNamed(context, RegisterScreen.id);
                 },
                 label: 'Register',
                 buttonColor: Colors.amber.shade900,
