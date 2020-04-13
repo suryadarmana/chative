@@ -1,6 +1,6 @@
 # Chative
 
-<img src="https://github.com/suryadarmana/chative/raw/master/images/logo.png" alt="Logo of Chative" style="max-width:20%;">
+<img src="https://raw.githubusercontent.com/suryadarmana/chative/master/images/logo.png" alt="Logo of Chative" style="max-width:20%;">
 
 A simple group chat app that has a purpose to demonstrate how to integrate firebase inside flutter app.
 
@@ -10,7 +10,7 @@ A simple group chat app that has a purpose to demonstrate how to integrate fireb
 * Multiple Person Chat Room
 
 ## Screenshot
-![Screenshot of Chative](https://github.com/suryadarmana/chative/tree/master/screenshot/screenshot.gif)
+![Screenshot of Chative](https://raw.githubusercontent.com/suryadarmana/chative/master/screenshot/screenshot.gif)
 
 ## How To Clone in Android studio
 * Simply copy the repository uri
@@ -23,6 +23,28 @@ A simple group chat app that has a purpose to demonstrate how to integrate fireb
 * This project already configured in order to use firebase but you have to add the google-services.json manually with your own
 * To get the google-service.json file please setup your firebase project via firebase console by using this project application id on ```android/app/build.gradle```
 * Place the google-services.json in : ```android/app```
+
+## Flutter Project Structure
+
+chative/
+ - lib/
+  - components/
+    - form_button.dart
+    - form_input.dart
+    - message_box.dart
+    - message_bubble.dart
+    - message_stream.dart
+  - screens/
+    - chat_screen.dart
+    - login_screen.dart
+    - register_screen.dart
+    - welcome_screen.dart
+  - utils/
+    - constants.dart
+    - dateutils.dart
+  - main.dart
+
+
 
 ## Status
 **[DEMO]**
