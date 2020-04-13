@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'message_bubble.dart';
@@ -30,6 +29,7 @@ class MessageStream extends StatelessWidget {
 
           return Expanded(
             child: ListView.builder(
+              reverse: true,
               itemCount: messages.length,
               itemBuilder: (context, index) {
                 String sender = messages[index]['sender'];
@@ -37,6 +37,7 @@ class MessageStream extends StatelessWidget {
                 return MessageBubble(
                   messageBody: messages[index]['text'],
                   sender: sender,
+                  timestamp: messages[index]['date'],
                   isCurrentUser: sender == currentUser,
                 );
               },

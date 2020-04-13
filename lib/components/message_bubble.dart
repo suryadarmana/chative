@@ -1,12 +1,15 @@
 import 'package:chative/utils/constants.dart';
+import 'package:chative/utils/dateutils.dart';
 import 'package:flutter/material.dart';
 
 class MessageBubble extends StatelessWidget {
   final String messageBody;
   final String sender;
+  final int timestamp;
   final bool isCurrentUser;
 
-  MessageBubble({this.messageBody, this.sender, this.isCurrentUser});
+  MessageBubble(
+      {this.messageBody, this.sender, this.isCurrentUser, this.timestamp});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +21,10 @@ class MessageBubble extends StatelessWidget {
         children: <Widget>[
           Text(
             isCurrentUser ? 'You' : sender,
+            style: TextStyle(fontSize: 12.0, color: Colors.grey.shade500),
+          ),
+          Text(
+            DateUtils.readTimestamp(timestamp),
             style: TextStyle(fontSize: 12.0, color: Colors.grey.shade500),
           ),
           SizedBox(
