@@ -10,7 +10,7 @@ A simple group chat app that has a purpose to demonstrate how to integrate fireb
 * Multiple Person Chat Room
 
 ## Screenshot
-<video src="https://github.com/suryadarmana/chative/raw/master/screenshot/screenshot.webm" width="320" height="200" controls preload></video>
+<video src="https://github.com/suryadarmana/chative/tree/master/screenshot/screenshot/screenshot.webm" width="320" height="200" controls preload></video>
 
 ## How To Clone in Android studio
 * Simply copy the repository uri
