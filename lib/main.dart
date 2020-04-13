@@ -14,10 +14,10 @@ class Chative extends StatelessWidget {
     return MaterialApp(
       // Theme Definition
       theme: ThemeData.dark().copyWith(
-        textTheme: kDefaultTextTheme,
-        cursorColor: Colors.amber.shade600,
-        textSelectionHandleColor: Colors.amber.shade600,
-      ),
+          textTheme: kDefaultTextTheme,
+          cursorColor: Colors.amber.shade600,
+          textSelectionHandleColor: Colors.amber.shade600,
+          accentColor: Colors.amber.shade600),
 
       // Routes Configuration
       initialRoute: WelcomeScreen.id,

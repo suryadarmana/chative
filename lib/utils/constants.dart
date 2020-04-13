@@ -37,3 +37,15 @@ const kMessageContainerDecoration = BoxDecoration(
     top: BorderSide(color: Colors.amber, width: 2.0),
   ),
 );
+
+const kBorderMessageUser = BorderRadius.only(
+  topLeft: Radius.circular(50),
+  bottomLeft: Radius.circular(50),
+  bottomRight: Radius.circular(50),
+);
+
+const kBorderMessageOthers = BorderRadius.only(
+  topRight: Radius.circular(50),
+  bottomLeft: Radius.circular(50),
+  bottomRight: Radius.circular(50),
+);
